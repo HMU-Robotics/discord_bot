@@ -14,6 +14,7 @@ class Test(commands.Cog):
 
     @nextcord.slash_command(name='hello',description="Test",guild_ids=[guildID])
     async def test(self,interaction:Interaction):
+        print(interaction.message)
         await interaction.response.send_message("Test")
     
 
