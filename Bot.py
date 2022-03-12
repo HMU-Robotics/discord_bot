@@ -1,7 +1,5 @@
 import os
-from sys import intern
 import nextcord
-from nextcord import Interaction
 from nextcord.ext import commands
 from dotenv import load_dotenv,find_dotenv
 
@@ -27,6 +25,7 @@ for filename in os.listdir("./cogs"):
 
 if __name__ == '__main__':
     for extension in initial_extensions:
+        print(extension)
         bot.load_extension(extension)
 ############################################################################
 
