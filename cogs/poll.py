@@ -1,7 +1,6 @@
 import nextcord
 from nextcord import Interaction
 from nextcord.ext import commands
-from pandas import options
 
 guildID = 806373333560983562
 
@@ -47,9 +46,10 @@ class Poll(commands.Cog):
 
 
     @nextcord.slash_command(name='poll',description="creates a poll",guild_ids=[guildID])
-    async def poll(self,ctx:commands.Context , title , description ,text,colour = 0x83bae3 ,):
+    async def poll(self,ctx:commands.Context , title , description ,text):
         optionsText = self.getOptions(text)
         count = 0
+        colour = 0x1d21ea
         finalmsg = ""
         for numText in optionsText:
             finalmsg += f"{self.emojiLetters[count]} )  {numText}\n\n"

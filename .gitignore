@@ -1,4 +1,6 @@
 .env
+.pyvenv.cfg
+./Scripts
 
 node_modules
 # Byte-compiled / optimized / DLL files
