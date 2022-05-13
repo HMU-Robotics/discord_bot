@@ -1,8 +1,16 @@
+
 import nextcord
 from nextcord import Interaction
 from nextcord.ext import commands
 
-guildID = 806373333560983562
+import os
+from dotenv import load_dotenv,find_dotenv
+
+
+load_dotenv(find_dotenv())
+guildID = os.getenv("guild_test")
+
+
 
 
 class Test(commands.Cog):

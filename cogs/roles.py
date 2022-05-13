@@ -4,7 +4,12 @@ from nextcord.ext import commands
 
 
 
-guild_id = 806373333560983562
+import os
+from dotenv import load_dotenv,find_dotenv
+
+
+load_dotenv(find_dotenv())
+guildID = os.getenv("guild_test")
 
 ## change/create roles for users
 class ChangeRoles(commands.Cog):
@@ -12,7 +17,7 @@ class ChangeRoles(commands.Cog):
         self.dis_user = dis_user
 
 
-    @nextcord.slash_command(guild_ids = [guild_id])
+    @nextcord.slash_command(guild_ids = [guildID])
     async def role_edit(self, interaction: Interaction):
 
         ## stays empty for subcommands

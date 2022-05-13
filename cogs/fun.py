@@ -5,7 +5,11 @@ import os
 from dotenv import load_dotenv , find_dotenv
 import asyncpraw
 
-guildID = 806373333560983562
+
+
+
+load_dotenv(find_dotenv())
+guildID = os.getenv("guild_test")
 
 load_dotenv(find_dotenv())
 REDDIT_APP_ID = os.getenv("REDDIT_APP_ID")

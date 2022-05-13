@@ -8,7 +8,13 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-guildID = 806373333560983562
+import os
+from dotenv import load_dotenv,find_dotenv
+
+
+load_dotenv(find_dotenv())
+guildID = os.getenv("guild_test")
+
 sender_address = os.getenv("SENDER_EMAIL")
 sender_pass = os.getenv("EMAIL_PASSWORD")
 
